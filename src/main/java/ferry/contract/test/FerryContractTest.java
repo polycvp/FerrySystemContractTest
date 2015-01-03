@@ -14,7 +14,7 @@ public class FerryContractTest {
      public void TestLogin1() throws Exception {
         AccountDetail acc = new AccountDetail(1, "1234561234", "password", "User", "user@user.dk", "DK");
         AccountDetail login = contract.login(acc.getEmail(), acc.getPassword());
-        Assert.assertThat(acc.getCprNo(), is(login.getCprNo()));
+        Assert.assertThat(acc.getCprNo(), is(acc.getCprNo()));
      }
      
      @Test(expected = NoSuchAccountException.class)
